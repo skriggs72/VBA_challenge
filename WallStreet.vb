@@ -48,10 +48,8 @@ For Each ws In Worksheets
                 
                 Yearly = ws.Cells(I, 6).Value - ws.Cells(J, 3).Value
                 Percent = (Yearly / ws.Cells(J, 3).Value) * 100
-                'J = J + 1
                 ws.Range("I" & RCount).Value = ws.Cells(I, 1).Value
                 ws.Range("J" & RCount).Value = Yearly
-                ws.Range("J" & RCount).Style = Yearly
                 ws.Range("K" & RCount).Value = Round(Percent, 2)
                 ws.Range("L" & RCount).Value = Total
             
